@@ -2,6 +2,7 @@ class Deallocer
 {
     public:
         virtual void tryToFree(void*) const = 0;
+        virtual ~Deallocer(){};
     
     protected:
         MemoryListForBorderDescriptorDeallocer* returnMemoryListForBorderDescriptorDeallocer(MemoryPool& _memoryPool)
