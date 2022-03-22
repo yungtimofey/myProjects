@@ -2,6 +2,7 @@ class Allocer
 {
     public:
         virtual void* tryToMalloc(size_t) const = 0;
+        virtual ~Allocer(){};
     
     protected:
         MemoryListForBorderDescriptorDeallocer* returnMemoryListForBorderDescriptorDeallocer(MemoryPool& _memoryPool)
